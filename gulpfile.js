@@ -5,7 +5,7 @@ const workboxBuild = require('workbox-build');
 const clean = () => del(['build/*'], { dot: true });
 gulp.task('clean', clean);
 
-const copy = () => gulp.src(['app/**/*', '!app/assets/*']).pipe(gulp.dest('build'));
+const copy = () => gulp.src(['app/**/*']).pipe(gulp.dest('build'));
 gulp.task('copy', copy);
 
 const serviceWorker = () => {
